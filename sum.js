@@ -1,4 +1,11 @@
-let a = 55;
-let b = 45
+let user = {
+  name: "Proshanto sarker partho",
+  age: 25,
+  sex: "Male",
+  nid: 123456789,
+  country: "Bangladeshi"
 
-module.exports = {a ,b}
+}
+
+
+export default user
