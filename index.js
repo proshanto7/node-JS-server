@@ -1,6 +1,7 @@
+const { a, b } = require("./sum.js")
+
 const sum = function (a, b) {
   console.log(`total number = ${a + b}`);
 }
 
-
-sum(10, 20)
+sum(a, b)
