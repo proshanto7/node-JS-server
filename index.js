@@ -1,8 +1,6 @@
-console.log('Hello Node Js');
-console.log('hello proshanto');
+const sum = function (a, b) {
+  console.log(`total number = ${a + b}`);
+}
 
-setTimeout(()=>{
 
-console.log('welcome node js');
-
-}, 2000)
+sum(10, 20)
