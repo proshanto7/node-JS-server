@@ -1,2 +1,2 @@
-import user from "./sum.js"
-console.log(user);
+const fs = require('fs');
+console.log(fs);
