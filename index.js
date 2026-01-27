@@ -1,11 +1,4 @@
-const fs = require("fs");
+const os = require('os');
 
-// fs.writeFile("userData.txt", "hello users", (error) => { console.log(error) })
 
-fs.readFile("userData.txt", "utf-8", (error, data) => {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log(data);
-  }
-});
+console.log(os.freemem()/ (1024 * 1024 *1024));
