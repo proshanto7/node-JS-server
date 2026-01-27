@@ -1,2 +1,5 @@
 const fs = require('fs');
-console.log(fs);
+
+fs.writeFile("userData.txt", "hello users", (error) => { console.log(error) })
+
+
