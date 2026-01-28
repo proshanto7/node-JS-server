@@ -4,4 +4,8 @@ const path = require('path');
 // console.log(os.freemem() / (1024 * 1024 * 1024));
 
 const filename = path.basename('/users/docs/file.txt');
-console.log(filename);
+
+
+
+// Get the file name of the current module
+console.log('File name:', __filename);
