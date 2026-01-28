@@ -13,6 +13,11 @@ const filename = path.basename('/users/docs/file.txt');
 // Get the directory name of the current module
 
 
-const dirname = path.dirname('/users/docs/file.txt')
+// const dirname = path.dirname('/users/docs/file.txt')
 
-console.log('Directory name:', dirname);
+// console.log('Directory name:', dirname);
+
+
+// Get the extension name of the current module
+const extname = path.extname('/users/docs/file.txt')
+console.log("extension name" , extname);
