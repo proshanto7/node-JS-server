@@ -30,4 +30,9 @@ const filename = path.basename('/users/docs/file.txt');
 const pathNavi = path.join('/users', '../system', './logs', 'file.txt');
 
 
-console.log(pathNavi);
+// console.log(pathNavi);
+
+//! Parse a file path
+
+const pathInfo = path.parse('/users/docs/file.txt');
+console.log(pathInfo);
