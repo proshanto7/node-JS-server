@@ -1,5 +1,6 @@
 const os = require('os');
 const path = require('path');
+const http = require('http');
 
 // console.log(os.freemem() / (1024 * 1024 * 1024));
 
@@ -34,5 +35,17 @@ const pathNavi = path.join('/users', '../system', './logs', 'file.txt');
 
 //! Parse a file path
 
-const pathInfo = path.parse('/users/docs/file.txt');
-console.log(pathInfo);
+// const pathInfo = path.parse('/users/docs/file.txt');
+// console.log(pathInfo);
+
+const server = http.createServer((req, res) => {
+
+  res.write("<h1> hello node server </h1>  ");
+
+
+  res.end()
+});
+
+server.listen(3000, () => {
+  console.log('Server running at http://localhost:3000/');
+});
