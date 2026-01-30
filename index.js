@@ -38,9 +38,27 @@ const pathNavi = path.join('/users', '../system', './logs', 'file.txt');
 // const pathInfo = path.parse('/users/docs/file.txt');
 // console.log(pathInfo);
 
+
+
+
+const users = [
+  {
+    id:0,
+    name:"proshanto sarker",
+    age: 25,
+    phone: "01716092653"
+  },
+  {
+    id:0,
+    name:"partho sarker",
+    age: 25,
+    phone: "01875066462"
+  }
+]
+
 const server = http.createServer((req, res) => {
 
-  res.write("<h1> hello node server </h1>  ");
+  res.write(JSON.stringify(users));
 
 
   res.end()
