@@ -1,7 +1,8 @@
 const os = require('os');
 const path = require('path');
 const http = require('http');
-
+const fs = require('fs');
+const { error } = require('console');
 // console.log(os.freemem() / (1024 * 1024 * 1024));
 
 const filename = path.basename('/users/docs/file.txt');
@@ -43,27 +44,39 @@ const pathNavi = path.join('/users', '../system', './logs', 'file.txt');
 
 const users = [
   {
-    id:0,
-    name:"proshanto sarker",
+    id: 0,
+    name: "proshanto sarker",
     age: 25,
     phone: "01716092653"
   },
   {
-    id:0,
-    name:"partho sarker",
+    id: 0,
+    name: "partho sarker",
     age: 25,
     phone: "01875066462"
   }
 ]
 
-const server = http.createServer((req, res) => {
+// const server = http.createServer((req, res) => {
 
-  res.write(JSON.stringify(users));
+//   res.write(JSON.stringify(users));
+//   res.end()
+// });
+
+// server.listen(3000, () => {
+//   console.log('Server running at http://localhost:3000/');
+// });
 
 
-  res.end()
-});
+fs.writeFile('name.txt', 'hello Proshanto!', (error) => {
 
-server.listen(3000, () => {
-  console.log('Server running at http://localhost:3000/');
-});
+
+  if (error) {
+    console.log('file', error);
+  } else {
+    console.log('Files created successfully');
+  }
+
+})
+
+
