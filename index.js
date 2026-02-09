@@ -2,7 +2,8 @@ const os = require('os');
 const path = require('path');
 const http = require('http');
 const fs = require('fs');
-const { error } = require('console');
+const events = require('events');
+const eventEmitter = new events.EventEmitter();
 // console.log(os.freemem() / (1024 * 1024 * 1024));
 
 const filename = path.basename('/users/docs/file.txt');
@@ -68,15 +69,19 @@ const users = [
 // });
 
 
-fs.writeFile('name.txt', 'hello Proshanto!', (error) => {
 
 
-  if (error) {
-    console.log('file', error);
-  } else {
-    console.log('Files created successfully');
-  }
+// fs.writeFile('name.txt', 'hello Proshanto!', (error) => {
+//   if (error) {
+//     console.log('file', error);
+//   } else {
+//     console.log('Files created successfully');
+//   }
+// })
 
+
+eventEmitter.on("print" ,(msg)=>{
+console.log("hello node js");
 })
 
-
+eventEmitter.emit("print")
